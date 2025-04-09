@@ -33,8 +33,8 @@ raw_body_p = respp.to_s
 parsed_body_p = JSON.parse(raw_body_p)
 rain_odds = parsed_body_p.fetch("currently").fetch("precipProbability")
 
-if odds_rain >= 0.50
-  pp Bring an umbrella or your ass will be sloppy as hell
-  else odds_rain < 0.50
-    pp 
+if rain_odds >= 0.50
+  pp "Bring an umbrella or your ass will be sloppy as hell"
+  else rain_odds < 0.50
+    pp "You good"
   end
